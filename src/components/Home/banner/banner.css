@@ -1,0 +1,510 @@
+@font-face {
+    font-family: playlist;
+    src: url(../../../fonts/PlaylistScript.otf);
+  }
+  
+  @font-face {
+    font-family: moontime;
+    src: url(../../../fonts/MoonTime.ttf);
+  }
+  
+  .banner {
+    /* background-color: #fff; */
+    width: 100%;
+  }
+  
+  .slideshow {
+    list-style: none;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .slideshow li span {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 80% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-animation: imageAnimation 25s linear infinite 0s;
+    -moz-animation: imageAnimation 25s linear infinite 0s;
+    animation: imageAnimation 25s linear infinite 0s;
+  }
+  
+  .slideshow li h3 {
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    left: 100px;
+    right: 0;
+    opacity: 0;
+    font-size: 12em;
+    font-weight: 500;
+    font-family: playlist;
+    color: #000;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-animation: titleAnimation 25s linear infinite 0s;
+    -moz-animation: titleAnimation 25s linear infinite 0s;
+    animation: titleAnimation 25s linear infinite 0s;
+  }
+  
+  .slideshow li h4 {
+    position: absolute;
+    z-index: 2;
+    top: 330px;
+    left: 100px;
+    right: 0;
+    opacity: 0;
+    font-size: 5em;
+    font-weight: 500;
+    font-family: moontime;
+    color: #000;
+    -webkit-animation: titleAnimation 25s linear infinite 0s;
+    -moz-animation: titleAnimation 25s linear infinite 0s;
+    animation: titleAnimation 25s linear infinite 0s;
+  }
+  
+  @media only screen and (max-width: 320px) {
+    .slideshow li span {
+      background-position: 90% 50%;
+      height: 200px;
+    }
+    .slideshow li:nth-child(1) span {
+      background-position: 93% 50%;
+    }
+    .slideshow li:nth-child(2) span {
+      background-position: 91% 50%;
+    }
+    .slideshow li:nth-child(3) span {
+      background-position: 88% 50%;
+    }
+    .slideshow li:nth-child(4) span {
+      background-position: 92% 50%;
+    }
+    .slideshow li:nth-child(5) span {
+      background-position: 88% 50%;
+    }
+    .slideshow li h3 {
+      display: none;
+    }
+    .slideshow li h4 {
+      display: none;
+    }
+  }
+  @media only screen and (min-width: 320px) and (max-width: 440px) {
+    .slideshow li span {
+      background-position: 95% 50%;
+      height: 300px;
+    }
+    .slideshow li h3 {
+      display: none;
+    }
+    .slideshow li h4 {
+      display: none;
+    }
+  }
+  
+  @media only screen and (min-width: 440px) and (max-width: 570px) {
+    .slideshow li span {
+      background-position: 100% 50%;
+      height: 300px;
+    }
+    .slideshow li h3 {
+      display: none;
+    }
+    .slideshow li h4 {
+      display: none;
+    }
+  }
+  
+  @media only screen and (min-width: 570px) and (max-width: 680px) {
+    .slideshow li span {
+      background-position: right;
+      height: 400px;
+    }
+    .slideshow li h3 {
+      display: none;
+    }
+    .slideshow li h4 {
+      display: none;
+    }
+  }
+  @media only screen and (min-width: 680px) and (max-width: 880px) {
+    .slideshow li span {
+      background-position: 85% 50%;
+      height: 400px;
+    }
+    .slideshow li h3 {
+      font-size: 7em;
+      top: 40px;
+      left: 30px;
+    }
+    .slideshow li h4 {
+      font-size: 3em;
+      top: 250px;
+      left: 30px;
+    }
+    .slideshow li:nth-child(2) h3 {
+      font-size: 5em;
+      line-height: 1em;
+      top: 120px;
+      left: 30px;
+    }
+    .slideshow li:nth-child(3) h3 {
+      font-size: 5em;
+      line-height: 1.2em;
+      top: 120px;
+      left: 30px;
+    }
+    .slideshow li:nth-child(4) h3 {
+      font-size: 4em;
+      line-height: 1.1em;
+      top: 120px;
+      left: 30px;
+    }
+    .slideshow li:nth-child(5) h3 {
+      font-size: 7em;
+      top: 120px;
+      left: 30px;
+    }
+  }
+  @media only screen and (min-width: 880px) and (max-width: 1100px) {
+    .slideshow li span {
+      background-position: 85% 50%;
+      height: 400px;
+    }
+    .slideshow li h3 {
+      font-size: 8em;
+      top: 40px;
+      left: 60px;
+    }
+    .slideshow li h4 {
+      font-size: 4em;
+      top: 250px;
+      left: 60px;
+    }
+    .slideshow li:nth-child(2) h3 {
+      font-size: 5em;
+      line-height: 1em;
+      top: 120px;
+      left: 60px;
+    }
+    .slideshow li:nth-child(3) h3 {
+      font-size: 5em;
+      line-height: 1.2em;
+      top: 80px;
+      left: 60px;
+    }
+    .slideshow li:nth-child(4) h3 {
+      font-size: 4em;
+      line-height: 1.1em;
+      top: 120px;
+      left: 40px;
+    }
+    .slideshow li:nth-child(5) h3 {
+      font-size: 8em;
+      top: 100px;
+      left: 60px;
+    }
+  }
+  @media only screen and (min-width: 1100px) and (max-width: 1440px) {
+    .slideshow li h3 {
+      font-size: 9em;
+      top: 60px;
+      left: 100px;
+    }
+    .slideshow li h4 {
+      font-size: 5em;
+      top: 320px;
+      left: 100px;
+    }
+    .slideshow li:nth-child(2) h3 {
+      font-size: 7em;
+      line-height: 1em;
+      top: 140px;
+      left: 80px;
+    }
+    .slideshow li:nth-child(3) h3 {
+      font-size: 7em;
+      line-height: 1.2em;
+      top: 100px;
+      left: 80px;
+    }
+    .slideshow li:nth-child(3) h3 {
+      font-size: 7em;
+      line-height: 1.2em;
+      top: 100px;
+      left: 80px;
+    }
+    .slideshow li:nth-child(4) h3 {
+      font-size: 6em;
+      line-height: 1.1em;
+      top: 120px;
+      left: 60px;
+    }
+    .slideshow li:nth-child(5) h3 {
+      font-size: 9em;
+      top: 140px;
+      left: 100px;
+    }
+  }
+  @media only screen and (min-width: 1440px) and (max-width: 2000px) {
+    .slideshow li h3 {
+      font-size: 10em;
+      top: 60px;
+      left: 180px;
+    }
+    .slideshow li h4 {
+      font-size: 6em;
+      top: 320px;
+      left: 180px;
+    }
+    .slideshow li:nth-child(2) h3 {
+      font-size: 7em;
+      line-height: 1em;
+      top: 120px;
+      left: 140px;
+    }
+    .slideshow li:nth-child(3) h3 {
+      font-size: 7em;
+      line-height: 1.2em;
+      top: 80px;
+      left: 140px;
+    }
+    .slideshow li:nth-child(4) h3 {
+      font-size: 7em;
+      line-height: 1.1em;
+      top: 80px;
+      left: 120px;
+    }
+    .slideshow li:nth-child(5) h3 {
+      font-size: 10em;
+      top: 100px;
+      left: 180px;
+    }
+  }
+  
+  @media only screen and (min-width: 2000px) {
+    .slideshow li span {
+        background-position: right;
+        height: 700px;
+    }
+    .slideshow li h3 {
+      font-size: 15em;
+      top: 20px;
+      left: 220px;
+    }
+    .slideshow li h4 {
+      font-size: 8em;
+      top: 450px;
+      left: 220px;
+    }
+    .slideshow li:nth-child(2) h3 {
+      font-size: 13em;
+      line-height: 1em;
+      top: 120px;
+      left: 160px;
+    }
+    .slideshow li:nth-child(3) h3 {
+      font-size: 13em;
+      line-height: 1.2em;
+      top: 80px;
+      left: 160px;
+    }
+    .slideshow li:nth-child(4) h3 {
+      font-size: 12em;
+      line-height: 1.1em;
+      top: 100px;
+      left: 140px;
+    }
+    .slideshow li:nth-child(5) h3 {
+      font-size: 15em;
+      top: 120px;
+      left: 220px;
+    }
+  }
+  .slideshow li:nth-child(1) h3, .slideshow li:nth-child(1) h4 {
+    -webkit-animation-delay: 0s;
+    -moz-animation-delay: 0s;
+    animation-delay: 0s;
+  }
+  .slideshow li:nth-child(2) h3, .slideshow li:nth-child(2) h4 {
+    -webkit-animation-delay: 5s;
+    -moz-animation-delay: 5s;
+    animation-delay: 5s;
+  }
+  .slideshow li:nth-child(3) h3, .slideshow li:nth-child(3) h4 {
+    -webkit-animation-delay: 10s;
+    -moz-animation-delay: 10s;
+    animation-delay: 10s;
+  }
+  .slideshow li:nth-child(4) h3, .slideshow li:nth-child(4) h4 {
+    -webkit-animation-delay: 15s;
+    -moz-animation-delay: 15s;
+    animation-delay: 15s;
+  }
+  .slideshow li:nth-child(5) h3, .slideshow li:nth-child(5) h4 {
+    -webkit-animation-delay: 20s;
+    -moz-animation-delay: 20s;
+    animation-delay: 20s;
+  }
+  
+  .slideshow li:nth-child(1) span {
+    background-image: url(../../../images/Goblin.png);
+    -webkit-animation-delay: 0s;
+    -moz-animation-delay: 0s;
+    animation-delay: 0s;
+  }
+  
+  .slideshow li:nth-child(2) span {
+    background-image: url(../../../images/Crash\ Landing\ On\ You.png);
+    -webkit-animation-delay: 5s;
+    -moz-animation-delay: 5s;
+    animation-delay: 5s;
+  }
+  
+  .slideshow li:nth-child(3) span {
+    background-image: url(../../../images/Descendants\ of\ the\ Sun.png);
+    -webkit-animation-delay: 10s;
+    -moz-animation-delay: 10s;
+    animation-delay: 10s;
+  }
+  
+  .slideshow li:nth-child(4) span {
+    background-image: url(../../../images/Whats\ Wrong\ with\ Secretary\ Kim.png);
+    -webkit-animation-delay: 15s;
+    -moz-animation-delay: 15s;
+    animation-delay: 15s;
+  }
+  
+  .slideshow li:nth-child(5) span {
+    background-image: url(../../../images/Vincenzo.png);
+    -webkit-animation-delay: 20s;
+    -moz-animation-delay: 20s;
+    animation-delay: 20s;
+  }
+  @-webkit-keyframes imageAnimation {
+    0% {
+      opacity: 0;
+      -webkit-animation-timing-function: ease-in;
+    }
+    12.5% {
+      opacity: 1;
+      -webkit-animation-timing-function: ease-out;
+    }
+    25% {
+      opacity: 1;
+    }
+    37.5% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @-moz-keyframes imageAnimation {
+    0% {
+      opacity: 0;
+      -moz-animation-timing-function: ease-in;
+    }
+    12.5% {
+      opacity: 1;
+      -moz-animation-timing-function: ease-out;
+    }
+    25% {
+      opacity: 1;
+    }
+    37.5% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes imageAnimation {
+    0% {
+      opacity: 0;
+      -webkit-animation-timing-function: ease-in;
+      -moz-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    12.5% {
+      opacity: 1;
+      -webkit-animation-timing-function: ease-out;
+      -moz-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    25% {
+      opacity: 1;
+    }
+    37.5% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes titleAnimation {
+    0% {
+      opacity: 0;
+    }
+    12.5% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 1;
+    }
+    37.5% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @-moz-keyframes titleAnimation {
+    0% {
+      opacity: 0;
+    }
+    12.5% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 1;
+    }
+    37.5% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes titleAnimation {
+    0% {
+      opacity: 0;
+    }
+    12.5% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 1;
+    }
+    37.5% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .no-cssanimations .slideshow li span {
+    opacity: 1;
+  }
+  

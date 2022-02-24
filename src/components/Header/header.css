@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li,
+a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10px;
+  background: transparent;
+  height: 100px;
+  /* overflow: hidden; */
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
+}
+
+.hamburgerOpen {
+  cursor: pointer;
+  width: 50px;
+  display: none;
+}
+.hamburgerClose {
+  cursor: pointer;
+  display: none;
+}
+
+.logo {
+  cursor: pointer;
+  width: 200px;
+}
+
+.nav_links {
+  list-style: none;
+}
+
+.nav_links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+  color: #2f80ed;
+}
+
+.search_form {
+  position: relative;
+  width: 250px;
+}
+
+.search_form input {
+  border: none;
+  width: 100%;
+  border-radius: 30px;
+  background: #151f30;
+  color: #fff;
+  padding: 10px 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.search_form button {
+  position: absolute;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+.search_icon {
+  width: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .nav_links {
+    height: 100vh;
+    position: fixed;
+    top: -120%;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #151f30;
+    transition: top 1s ease;
+    display: flex;
+  }
+  .menuActive {
+    top: 0%;
+  }
+  .nav_links li {
+    padding: 20px 0;
+  }
+  .nav_links li a {
+    font-size: 1.5rem;
+    padding: 20px 0;
+  }
+  .search_form {
+    display: none;
+  }
+  .hamburgerClose {
+    position: absolute;
+    top: 20px;
+    right: 50%;
+    width: 32px;
+  }
+  .hamburgerOpen {
+    display: block;
+  }
+  .hamburgerCloseActive {
+    display: block;
+    right: 20px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .logo {
+    width: 200px;
+  }
+  .nav_links li a {
+    font-size: 1.65rem;
+  }
+  .search_form {
+    width: 300px;
+  }
+  .search_form input {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .logo {
+    width: 300px;
+  }
+  .nav_links li a {
+    font-size: 1.8rem;
+  }
+  .search_form {
+    width: 400px;
+  }
+  .search_form input {
+    font-size: 25px;
+  }
+}
